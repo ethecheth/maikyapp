@@ -5,10 +5,10 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package.json ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --production
 
 # Copy the rest of the application code to the working directory
 COPY . .
@@ -17,11 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port the app runs on
-EXPOSE 3000
-
-ENV NUXT_HOST=0.0.0.0
-
-ENV NUXT_PORT=3000
+EXPOSE 3001
 
 # Define the command to run the application
 CMD [ "npm", "start" ]
