@@ -22,7 +22,7 @@ services:
     ports:
       - "3000:3000"  # Host port 3000 mapped to container port 3000
     environment:
-      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_URL=http://119.59.99.163:3000
       - NEXT_PUBLIC_API_URL=http://api:8080/api
     depends_on:
       - api
