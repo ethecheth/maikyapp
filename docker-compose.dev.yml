@@ -5,7 +5,7 @@ services:
     build: 
       context: ./maikyapi
       dockerfile: Dockerfile.dev
-    image: maiky/api
+    image: maiky/apitest
     ports:
       - "3501:8084"  # Host port 3500 mapped to container port 8080
     environment:
@@ -18,7 +18,7 @@ services:
     build: 
       context: ./maikyweb
       dockerfile: Dockerfile
-    image: maiky/web
+    image: maiky/webtest
     ports:
       - "3000:3000"  # Host port 3000 mapped to container port 3000
     environment:
