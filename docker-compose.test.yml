@@ -4,4 +4,5 @@ services:
       context: ./maikytest
       dockerfile: Dockerfile
     volumes:
-      - ./reports:/reports
+      - ./reports:/opt/app/junit/
+    command: npx cypress run --reporter junit --reporter-options mochaFile=/opt/app/junit/test-results.xml
