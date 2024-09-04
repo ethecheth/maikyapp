@@ -4,4 +4,4 @@ services:
       context: ./maikytest
       dockerfile: Dockerfile
     volumes:
-      - ./reports:/opt/app/junit/
+      - ./reports:/reports
