@@ -6,5 +6,5 @@ services:
     volumes:
       - ./reports:/opt/app/junit/
     environment:
-      - CYPRESS_BASE_URL=http://119.59.99.163:8080
+      - CYPRESS_BASE_URL=http://127.0.0.1:8080
     command: npx cypress run --reporter junit --reporter-options mochaFile=/opt/app/junit/test-results.xml
