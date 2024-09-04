@@ -1,6 +1,5 @@
 describe("Maiky_Login", () => {
     it("Login success case", () => {
-        cy.viewport(1263, 242);
         cy.visit("http://119.59.99.163:8080/login");
         cy.get("div:nth-of-type(1) > input").click();
         cy.get("div:nth-of-type(1) > input").type("admin@admin.com");
