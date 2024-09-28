@@ -54,8 +54,11 @@ namespace maikyapi.Controllers
             {
                 return BadRequest("Entity ID mismatch");
             }
+            entity.Title = entitydto.Title;
             entity.Name = entitydto.Name;
             entity.Lname = entitydto.Lname;
+            entity.Address = entitydto.Address;
+            entity.Phone = entitydto.Phone;
             _context.Entry(entity).State = EntityState.Modified;
 
             try
