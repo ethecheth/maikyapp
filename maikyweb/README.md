@@ -4,6 +4,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
+create .env
+NEXTAUTH_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:8080/api
+NEXTAUTH_SECRET=xxxxxxxxx
+
 ```bash
 npm run dev
 # or
